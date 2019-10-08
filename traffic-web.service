@@ -1,0 +1,14 @@
+[Unit]
+Description=Trafficlight Control
+After=network.target
+
+[Service]
+ExecStart=go run main.go
+WorkingDirectory=/home/pi/traffic-web
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
