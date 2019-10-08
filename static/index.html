@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Traffic Light Control</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("button").click(function(e) {
+          color(e.target.id);
+        });
+      });
+      function color(color) {
+
+        $.ajax({
+          type: "GET",
+          url: "/backend/?color=" + color,
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <button id='red'>RED</button>
+    <button id='yellow'>YELLOW</button>
+    <button id='green'>GREEN</button>
+  </body>
+</html>
