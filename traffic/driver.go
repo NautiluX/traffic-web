@@ -35,7 +35,7 @@ func setLight(num, state int) {
 	cmd.Stdout = &out
 	err := cmd.Run()
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
 	}
 	fmt.Printf("output: %q\n", out.String())
 }
