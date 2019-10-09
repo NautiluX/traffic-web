@@ -6,6 +6,8 @@ traffic-web: main.go
 
 install: all
 	systemctl stop traffic-web || true
+	mkdir -p /var/run/traffic-web
+	cp -r static /var/run/traffic-web/
 	cp traffic-web /usr/bin/
 	cp traffic-web.service /etc/systemd/system/
 	systemctl daemon-reload
