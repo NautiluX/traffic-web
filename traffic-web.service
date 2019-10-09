@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 ExecStart=traffic-web
-WorkingDirectory=/var/run/traffic-web
+WorkingDirectory=/usr/lib/traffic-web
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
