@@ -10,23 +10,28 @@ import (
 
 func Red(){
   fmt.Println("Setting color to red")
-  setLight(0, 1)
-  setLight(1, 0)
-  setLight(2, 0)
+  setColors(1,0,0)
 }
 
 func Yellow(){
   fmt.Println("Setting color to yellow")
-  setLight(0, 0)
-  setLight(1, 1)
-  setLight(2, 0)
+  setColors(0,1,0)
 }
 
 func Green(){
   fmt.Println("Setting color to green")
-  setLight(0, 0)
-  setLight(1, 0)
-  setLight(2, 1)
+  setColors(0,0,1)
+}
+
+func Off(){
+  fmt.Println("Turning off traffic light")
+  setColors(0,0,0)
+}
+
+func setColors(red, yellow, green int) {
+  setLight(0, red)
+  setLight(1, yellow)
+  setLight(2, green)
 }
 
 func setLight(num, state int) {

@@ -31,5 +31,7 @@ func serveBackend(w http.ResponseWriter, r *http.Request) {
 		traffic.Yellow()
 	case "green":
 		traffic.Green()
+	case "off":
+		traffic.Off()
 	}
 }
